@@ -4,6 +4,7 @@
 * ***notice***:
 
         本文作者是高中毕业初学者(2025.7.21)内容可能存在不完美
+                 orangeTZ07
             会对原书内容进行适当扩展
             会减少涉及过于基础的知识
             其中有些问题可能无法在原书对应章节找到答案，属于扩展问题，建议自行搜索或者询问AI
@@ -14,16 +15,16 @@
 ####    前置知识点补充：
 此书缺少一些本人认为必要的知识点，缺少这些知识会导致在实操过程中遇见许多问题
 
-1.变量扩展(重要，需要深度理解); 来自"linux the command line"一书
-
-2.子进程和子shell的区别以及其对环境的继承性，两者各由哪些种类命令引发
-
-            (有些书籍会把二者混为一谈。建议搜索详细文章，或者询问AI)
+>1.变量扩展(重要，需要深度理解); 来自"linux the command line"一书
+>
+>2.子进程和子shell的区别以及其对环境的继承性，两者各由哪些种类命令引发
+>
+>            (有些书籍会把二者混为一谈。建议搜索详细文章，或者询问AI)
 ### 章节
 #### 第二章：走进shell
-[若只想快速入门使用linux系统可以直接看快捷键那一问]
+~~[若只想快速入门使用linux系统可了解如何进入终端后直接看快捷键那一问]~~
 * 什么是控制台终端？
-* 怎么进入控制台终端？【Ctrl + Alt + T】
+* 怎么进入控制台终端？[Ctrl + Alt + T]
 * 各发行版中，进入控制台终端后怎么回到图形界面？
 * 什么是linux控制台？
 * 什么是图形化终端？
@@ -33,28 +34,34 @@
 * 怎么查看自己登陆的是哪个tty?(多种方法)
 * 本章节个性化终端的指令是什么？
 
---上述问题可以结合视频图片理解，注意区分各种终端，我们现在常用的是虚拟终端--
+上述问题可以结合视频图片理解，注意区分各种终端，我们现在常用的是虚拟终端
 
 * 图形化终端的各个快捷键：
 
-        +查看自己当前终端仿真器的名称？【terminal:-o comm=】                          
-        新建标签页？【Ctrl + Shift + T】
-        切换标签页？【Ctrl + Page Down/Page Up】||【Alt + ->/<-】
-        退出标签页？【Ctrl + Shift + W】
+---
+
+        +查看自己当前终端仿真器的名称？ [terminal:-o comm=]                        
+        新建标签页？[Ctrl + Shift + T]
+        切换标签页？[Ctrl + Page Down/Page Up]||[Alt + ->/<-]
+        退出标签页？[Ctrl + Shift + W]
         从当前终端窗口新建终端窗口？
-        关闭当前终端窗口？【Ctrl + Shift + W】
-        复制粘贴？【复制：Ctrl + C，粘贴：Ctrl + V】
-                 【终端里：复制：Ctrl + Shift + C，粘贴：Ctrl + Shift + V】
-        增大或减小窗口或字号？【Super + Up Arrow/Down Arrow】【Ctrl + Shift + （+/-）】
-        +恢复默认字号？【Ctrl + Shift + 0】
+        关闭当前终端窗口？[Ctrl + Shift + W]
+        复制粘贴？[复制：Ctrl + C，粘贴：Ctrl + V]
+                 [终端里：复制：Ctrl + Shift + C，粘贴：Ctrl + Shift + V]
+        增大或减小窗口或字号？[Super + Up Arrow/Down Arrow][Ctrl + Shift + （+/-）]
+        +恢复默认字号？[Ctrl + Shift + 0]
         打开find窗口？
-        清除终端文本？【the most esay way is 'clear'】
-        +重置终端？(与clear有什么不同？)【设置会完全重置】
-        终端仿真器上下滚动查看历史输出？【CTRL + Alt + up arrow/down arrow】
-        终端仿真器上下翻页查看历史输出？【CTRL + Alt + PyUp/PgDn】
+        清除终端文本？[the most esay way is 'clear']
+        +重置终端？(与clear有什么不同？)[设置会完全重置]
+        终端仿真器上下滚动查看历史输出？[CTRL + Alt + up arrow/down arrow]
+        终端仿真器上下翻页查看历史输出？[CTRL + Alt + PyUp/PgDn]
         新建快捷键？
-       【1.edit  2.Preferences  3.Shortcuts  4.+  5.程序选择  6.gnome-terminal  7.快捷键】
-* =shell提示符组成？(bash)  【用户类型@用户名字:~#】
+       [1.edit  2.Preferences  3.Shortcuts  4.+  5.程序选择  6.gnome-terminal  7.快捷键]
+
+---
+
+* =shell提示符组成？(bash)  [用户类型@用户名字:~#/$]
+
 #### 第三章：bash shell基础命令
 > 本章介绍了基础命令
 * man命令
@@ -62,7 +69,7 @@
         man启动的分页程序通常是什么？
         翻页按键是什么？
         上下滚动按键？
-        逐行向下阅读按键？
+        逐行向下阅读按键？[
         =如果忘记命令，怎么通过关键词查找命令(前提：有man_page)？
         +man手册页通常有查询内容在手册中的节号。怎么查看节号？节号有什么意义？
         man手册页怎么直接查看相关节号所包含介绍？
@@ -71,10 +78,15 @@
 * =***linux虚拟目录结构***：
 分别回想以下目录所涉及内容:
 
-| 1 | 2 | 3 | 4 | 5 | 6 |          |---|------|-----|------|----|---| | / | /    bin | /etc | /home | /dev | /boot | | /lib | /media | /mnt | /usr | /tmp | /var | | /sys |/root | /proc | /run | /sbin | /srv | | /libname | /etc/opt | /var/opt | /opt | /usr/bin| /usr/local/bin|
+| 1 | 2 | 3 | 4 | 5 | 6 |       
+|---|------|-----|------|----|---| 
+| / | /    bin | /etc | /home | /dev | /boot |
+| /lib | /media | /mnt | /usr | /tmp | /var | 
+| /sys |/root | /proc | /run | /sbin | /srv |
+| /libname | /etc/opt | /var/opt | /opt | /usr/bin| /usr/local/bin|
 * 区分/bin /usr/bin /usr/local/bin
 * 什么是文件系统层级结构(FHS)?
-* 相对路径和绝对路径？
+* 相对路径和绝对路径？[使用cd指令需要理解]
 * 目录内部用于表示相对路径的两个特殊目录是什么？
 * +目录中的文件改动和访问所涉及的权限由目录掌控吗？
 * 列出文件命令及常用选项？
@@ -90,7 +102,9 @@
 
         *和?用法
         []用法
+  [还有{},\,~,$,#,%]
 * 除了ls命令，都有哪些命令使用通配符？
+[元字符通配对文件操作时常用，但多用于在不知道文件名时查找文件]
 * 如何复制文件？
 * 如何给文件改名？
 * +改动文件名之后文件会出现什么变化(至少说出2处)?
@@ -112,6 +126,7 @@
 * tail默认显示多少行？
 * =tail如何充当实时监控？
 * head命令怎么用？
+|cd|mv|touch|cp|man|ls|
 #### 第四章：更多bash shell命令
 > 本章介绍了系统管理和磁盘管理，很重要。
 * ps命令
