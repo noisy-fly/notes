@@ -1,4 +1,4 @@
-# 参考书籍：linux命令行与shell编程大全
+# 参考书籍：《linux命令行与shell编程大全》
 
 ## 百问：
 * ***notice***:
@@ -11,15 +11,16 @@
             文本基于bash环境编写,且目前发现许多bash用法在zsh会出错
             '+'标记为出个人认为较进阶的知识点
             '='标记出重要知识点
+            注释者：我将使用[]符号来写下我自己的笔记，所有指令以ubuntu为例子
 ***
-####    前置知识点补充：
+* ***前置知识点补充***：
 此书缺少一些本人认为必要的知识点，缺少这些知识会导致在实操过程中遇见许多问题
 
 >1.变量扩展(重要，需要深度理解); 来自"linux the command line"一书
 >
 >2.子进程和子shell的区别以及其对环境的继承性，两者各由哪些种类命令引发
 >
->            (有些书籍会把二者混为一谈。建议搜索详细文章，或者询问AI)
+>(有些书籍会把二者混为一谈。建议搜索详细文章，或者询问AI)
 ### 章节
 #### 第二章：走进shell
 ~~[若只想快速入门使用linux系统可了解如何进入终端后直接看快捷键那一问]~~
@@ -40,27 +41,27 @@
 
 ---
 
-        +查看自己当前终端仿真器的名称？ [terminal:-o comm=]                        
+        +查看自己当前终端仿真器的名称？ [终端:echo $TERM]                        
         新建标签页？[Ctrl + Shift + T]
-        切换标签页？[Ctrl + Page Down/Page Up]||[Alt + ->/<-]
+        切换标签页？[Alt + Tab]
         退出标签页？[Ctrl + Shift + W]
         从当前终端窗口新建终端窗口？
         关闭当前终端窗口？[Ctrl + Shift + W]
         复制粘贴？[复制：Ctrl + C，粘贴：Ctrl + V]
                  [终端里：复制：Ctrl + Shift + C，粘贴：Ctrl + Shift + V]
-        增大或减小窗口或字号？[Super + Up Arrow/Down Arrow][Ctrl + Shift + （+/-）]
-        +恢复默认字号？[Ctrl + Shift + 0]
+        增大或减小窗口或字号？[Ctrl + Shift + （+/-）]
+        +恢复默认字号？[Ctrl + 0]
         打开find窗口？
-        清除终端文本？[the most esay way is 'clear']
+        清除终端文本？[终端：clear]
         +重置终端？(与clear有什么不同？)[设置会完全重置]
-        终端仿真器上下滚动查看历史输出？[CTRL + Alt + up arrow/down arrow]
-        终端仿真器上下翻页查看历史输出？[CTRL + Alt + PyUp/PgDn]
-        新建快捷键？
-       [1.edit  2.Preferences  3.Shortcuts  4.+  5.程序选择  6.gnome-terminal  7.快捷键]
+        终端仿真器上下滚动查看历史输出？[Ctrl + Shift + up arrow/down arrow]
+        终端仿真器上下翻页查看历史输出？[Ctrl + shift + PyUp/PgDn]
+        新建快捷键？[设置，键盘，下拉到快捷键，自行设置]
 
 ---
 
-* =shell提示符组成？(bash)  [用户类型@用户名字:~#/$]
+* =shell提示符组成？(bash)  [用户类型@用户名字:~#]
+                          [使用export PS1='相关指令'可以自定义shell提示符，但不建议这样做]
 
 #### 第三章：bash shell基础命令
 > 本章介绍了基础命令
